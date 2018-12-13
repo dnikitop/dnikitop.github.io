@@ -10,11 +10,11 @@ void setup() {
     balls[i] = new Ball(random(width), random(height), random(4), random(4), random(30, 70), i, balls);
   }
   noStroke();
-  fill(255,200);
+  fill(10,200);
 }
 
 void draw() {
-  background(125);
+  background(250);
   for (Ball ball : balls) {
     ball.collide();
     ball.move();
