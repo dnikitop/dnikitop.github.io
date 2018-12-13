@@ -1,16 +1,16 @@
-int numBalls = 12;
+int numBalls = 4;
 float spring = 0.05;
 float gravity = 0.03;
-float friction = -0.9;
+float friction = -1.0;
 Ball[] balls = new Ball[numBalls];
 
 void setup() {
   size(640, 360);
   for (int i = 0; i < numBalls; i++) {
-    balls[i] = new Ball(random(width), random(height), random(30, 70), i, balls);
+    balls[i] = new Ball(random(width), random(height), random(4), random(4), random(30, 70), i, balls);
   }
   noStroke();
-  fill(255, 204);
+  fill(0);
 }
 
 void draw() {
@@ -31,9 +31,11 @@ class Ball {
   int id;
   Ball[] others;
  
-  Ball(float xin, float yin, float din, int idin, Ball[] oin) {
+  Ball(float xin, float yin, float vxin, float vyin, float din, int idin, Ball[] oin) {
     x = xin;
     y = yin;
+    vx = vxin;
+    vy = vyin;
     diameter = din;
     id = idin;
     others = oin;
@@ -60,7 +62,6 @@ class Ball {
   }
   
   void move() {
-    vy += gravity;
     x += vx;
     y += vy;
     if (x + diameter/2 > width) {
