@@ -10,7 +10,7 @@ void setup() {
     balls[i] = new Ball(random(width), random(height), random(4), random(4), random(30, 70), i, balls);
   }
   noStroke();
-  fill(0,255);
+  fill(1,255);
 }
 
 void draw() {
