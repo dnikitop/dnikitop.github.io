@@ -14,7 +14,7 @@ void setup() {
 }
 
 void draw() {
-  background(250);
+  background(255);
   for (Ball ball : balls) {
     ball.collide();
     ball.move();
