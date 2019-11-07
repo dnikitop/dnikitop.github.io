@@ -7,6 +7,12 @@ Ball[] balls = new Ball[numBalls];
 
 
 
+
+
+
+
+
+
 void setup() {
   size(640, 360);
   for (int i = 0; i < numBalls; i++) {
