@@ -4,6 +4,9 @@ float gravity = 0.03;
 float friction = -1.0;
 Ball[] balls = new Ball[numBalls];
 
+
+
+
 void setup() {
   size(640, 360);
   for (int i = 0; i < numBalls; i++) {
